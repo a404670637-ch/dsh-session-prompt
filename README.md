@@ -32,7 +32,10 @@ DSH 的上下文压缩只处理**对话历史消息**（用户/助手/工具调�
 
 ```bash
 git clone https://github.com/a404670637-ch/dsh-session-prompt.git
-dsh plugin --profile web add ./dsh-session-prompt
+# 注意：dsh plugin 会在 profile 目录里执行 pnpm，
+# 因此请传克隆目录的绝对路径，不要用 ./dsh-session-prompt。
+dsh plugin --profile web add "C:\src\dsh-session-prompt"          # Windows
+# dsh plugin --profile web add "$HOME/src/dsh-session-prompt"      # macOS / Linux
 ```
 
 `dsh plugin` 会把参数转发给 profile 目录里的 pnpm；安装的是本地目录依赖。安装完成后**刷新 DSH Web 页面**（Client 半是浏览器模块，需要重新加载）。
