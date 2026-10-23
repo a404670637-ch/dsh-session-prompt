@@ -1,7 +1,5 @@
 # dsh-session-prompt
 
-[![test](https://github.com/a404670637-ch/dsh-session-prompt/actions/workflows/test.yml/badge.svg)](https://github.com/a404670637-ch/dsh-session-prompt/actions/workflows/test.yml)
-
 在 [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/deepseek-harness) Web 的**会话头部**为每个对话固定一段独立提示词。它作为系统提示词的一部分随每次请求完整发送，**不进入对话历史**，因此上下文压缩（compaction / ACP fold）不会把它折叠或省略；压缩之后仍然完整传给模型。
 
 > A DSH Web plugin that pins a per-conversation prompt as a system-prompt section. It is sent in full on every request and is never folded by context compaction.
@@ -97,7 +95,7 @@ dsh plugin --profile web add ./dsh-session-prompt
 node --test
 ```
 
-Host 测试覆盖：估算器、注入段渲染、按会话保存/读取、运行中拒绝、超限拒绝、未知会话、跨实例持久化、`agent/created` 注册。测试不依赖 DSH 运行时，CI 使用 Node 22。
+Host 测试覆盖：估算器、注入段渲染、按会话保存/读取、运行中拒绝、超限拒绝、未知会话、跨实例持久化、`agent/created` 注册。测试不依赖 DSH 运行时，可在 Node 22 下直接运行。
 
 ## 兼容性与限制
 

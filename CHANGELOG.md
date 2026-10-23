@@ -7,4 +7,4 @@
 - Injected as system-prompt section `session-prompt:pinned` (order 9500), sent in full on every request and immune to context compaction.
 - Session-header action + modal editor; read-only while the model is running.
 - 5,000-token budget with composition-aware conservative estimator.
-- Host tests and GitHub Actions workflow.
+- Host tests for the estimator, section rendering, persistence, and endpoint limits.
