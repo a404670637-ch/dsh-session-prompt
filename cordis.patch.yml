@@ -1,0 +1,6 @@
+- insert:
+    - id: session-prompt
+      name: dsh-session-prompt
+      config:
+        maxTokens: 5000
+        sectionOrder: 9500

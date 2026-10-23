@@ -1,0 +1,56 @@
+{
+  "name": "dsh-session-prompt",
+  "version": "0.1.0",
+  "description": "Per-conversation pinned prompt in the DSH Web session header: injected as a system-prompt section, sent in full on every request, and never folded by context compression.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "system-prompt",
+    "session-prompt",
+    "context-compression"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a404670637-ch/dsh-session-prompt.git"
+  },
+  "homepage": "https://github.com/a404670637-ch/dsh-session-prompt#readme",
+  "bugs": {
+    "url": "https://github.com/a404670637-ch/dsh-session-prompt/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

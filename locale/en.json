@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Prompt",
+    "description": "A per-conversation pinned prompt in the session header. It is injected as a system-prompt section, sent in full with every request, and survives context compression."
+  }
+}
